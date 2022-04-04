@@ -157,14 +157,14 @@ class="article article-type-post"
     <div class="article-entry post-inner-html">
         
         <h2 id="POST-SCSS-failed"><a href="#POST-SCSS-failed" class="headerlink" title="POST SCSS failed:"></a>POST SCSS failed:</h2><ol>
-<li>到「沒空白」的資料夾下面(像 <code>Natalie Lin</code> 就不行)</li>
+<li>到「沒空白」的資料夾下面(像 <code>Natalie Lin</code> 名字中間有空格就不行)</li>
 <li>安裝本土npm, 不能是global</li>
 <li>看README有沒有要求要複製 <code>package.json</code> 、 <code>npm postcss</code> 之類的或其他東西</li>
 </ol>
 <h2 id="網址-x2F-404-not-found"><a href="#網址-x2F-404-not-found" class="headerlink" title="網址&#x2F;404 not found:"></a>網址&#x2F;404 not found:</h2><p>確定有沒有貼成repo的網址:(</p>
 <h2 id="有git-submodule"><a href="#有git-submodule" class="headerlink" title="有git submodule"></a>有git submodule</h2><p>怎麼看:<br>git clone 之後cd進去裡面會顯示(main)或(master)<br>解決方式:<br>直接Download Zip不要用clone</p>
-<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>解決方式:<br>在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)</p>
-<h2 id="“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”"><a href="#“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”" class="headerlink" title="“TOCSS … this feature is not available in your current Hugo version”"></a>“TOCSS … this feature is not available in your current Hugo version”</h2><p>解決方式:<br>On the release page, look for archives with extended in the name.<br>怎麼確認裝對了:<br>run <code>hugo version</code> and look for the word <code>extended</code>.</p>
+<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>解決方式:<br>😀在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)<br>😐丟到主頁(username.github.io)下面</p>
+<h2 id="“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”"><a href="#“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”" class="headerlink" title="“TOCSS … this feature is not available in your current Hugo version”"></a>“TOCSS … this feature is not available in your current Hugo version”</h2><p>解決方式:<br>On the release page, look for archives with extended in the name.<br>如何確認是否安裝:<br>run <code>hugo version</code> and look for the word <code>extended</code>.</p>
 
         
     </div>
@@ -209,17 +209,17 @@ class="article article-type-post"
     <div class="article-entry post-inner-html">
         
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
         
