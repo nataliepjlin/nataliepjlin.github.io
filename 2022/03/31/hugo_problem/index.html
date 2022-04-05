@@ -197,7 +197,8 @@
 </ol>
 <h2 id="網址-x2F-404-not-found"><a href="#網址-x2F-404-not-found" class="headerlink" title="網址&#x2F;404 not found:"></a>網址&#x2F;404 not found:</h2><p>確定有沒有貼成repo的網址:(</p>
 <h2 id="有git-submodule"><a href="#有git-submodule" class="headerlink" title="有git submodule"></a>有git submodule</h2><p>怎麼看:<br>git clone 之後cd進去裡面會顯示(main)或(master)<br>解決方式:<br>直接Download Zip不要用clone</p>
-<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>解決方式:<br>😀在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)<br>😐丟到主頁(username.github.io)下面</p>
+<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>可以解決的方式:<br>😀在全域<code>config.toml</code>加上<code>canonifyURLs = &quot;true&quot;</code><br>😐在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)<br>😥丟到主頁(username.github.io)下面</p>
+<h2 id="有功能不會動-這次是search-function"><a href="#有功能不會動-這次是search-function" class="headerlink" title="有功能不會動(這次是search function)"></a>有功能不會動(這次是search function)</h2><p>解方同上的😀內容</p>
 <h2 id="“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”"><a href="#“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”" class="headerlink" title="“TOCSS … this feature is not available in your current Hugo version”"></a>“TOCSS … this feature is not available in your current Hugo version”</h2><p>解決方式:<br>On the release page, look for archives with extended in the name.<br>如何確認是否安裝:<br>run <code>hugo version</code> and look for the word <code>extended</code>.</p>
 
         </div>
@@ -219,7 +220,7 @@
   
   
     <a href="/2022/03/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-caption">前の記事</div>
+      <div class="article-nav-caption">上一篇</div>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -227,7 +228,7 @@
 
 
     <section class="share">
-        <div class="share-title">シェア</div>
+        <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
             href="https://twitter.com/share?text=Hugo 疑難雜症 - Natalie Lin&url=http://nataliepjlin.github.io/2022/03/31/hugo_problem/">
             <box-icon type='logo' name='twitter'></box-icon>
