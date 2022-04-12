@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>Hello World | Natalie Lin</title>
+    <title>APCS 考古題:小群體 | Natalie Lin</title>
 
     <meta name="description" content="Natalie Lin">
     <meta name="keywords" content="">
@@ -15,21 +15,21 @@
 
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "Hello World | Natalie Lin"  />
+    <meta property="og:title" content= "APCS 考古題:小群體 | Natalie Lin"  />
     <meta property="og:description" content= "Natalie Lin" />
-    <meta property="og:url" content="http://nataliepjlin.github.io/2022/03/28/hello-world/index.html" />
+    <meta property="og:url" content="http://nataliepjlin.github.io/apcs-adv08-1/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Natalie Lin" />
     <meta property="article:publisher" content="" />
     <meta property="og:description" content="Natalie Lin" />
-    <meta name="twitter:title" content="Hello World | Natalie Lin"/>
+    <meta name="twitter:title" content="APCS 考古題:小群體 | Natalie Lin"/>
     <meta name="twitter:description" content="Natalie Lin"/>
     <script type="application/ld+json">
         {
             "description": "Natalie Lin",
             "author": { "@type": "Person", "name": "Natalie Lin" },
             "@type": "BlogPosting",
-            "url": "http://nataliepjlin.github.io/2022/03/28/hello-world/index.html",
+            "url": "http://nataliepjlin.github.io/apcs-adv08-1/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -38,11 +38,11 @@
             },
             "name": "Natalie Lin"
             },
-            "headline": "Hello World | Natalie Lin",
-            "datePublished": "2022-03-28T14:59:50.648Z",
+            "headline": "APCS 考古題:小群體 | Natalie Lin",
+            "datePublished": "2022-04-11T14:46:03.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://nataliepjlin.github.io/2022/03/28/hello-world/index.html"
+                "@id": "http://nataliepjlin.github.io/apcs-adv08-1/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -152,7 +152,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl1khv5t70000z4tu30245nwy" class="article article-type-post" itemscope
+    <article id="post-cl1utzbqt00003wtu1pgd2o7b" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -168,7 +168,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      APCS 考古題:小群體
     </h1>
   
 
@@ -178,11 +178,19 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-03-28T14:59:50.648Z" itemprop="datePublished">2022-03-28</time>
+  <time datetime="2022-04-11T14:46:03.000Z" itemprop="datePublished">2022-04-11</time>
 </div>
 
             
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/APCS/">APCS</a>
+            </div>
+            
 
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li></ul>
+            </div>
             
 
             
@@ -190,19 +198,29 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+            <h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p><a target="_blank" rel="noopener" href="https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf">https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf</a></p>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>把data內的元素從某不為-1的data[idx]開始跑，跑到就把該元素改成-1，跑到有標-1(開始的那個)為止<br>回傳有幾個被marked</p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="main-function"><a href="#main-function" class="headerlink" title="main function"></a>main function</h2><pre><code class="bash">def mark(data,idx):
+    count=0
+    while(data[idx]!=-1):
+        tmp=data[idx]
+        data[idx]=-1 #mark
+        idx=tmp #跑到好友編號，重複迴圈
+        count+=1 #計算有幾個被標記
+    return count
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">n=int(input())
+data=list(map(int,input().split()))
+marked=0
+total=0 #群體總數
+for i in range(n):
+    if data[i]!=-1:
+        marked+=mark(data,i)
+        total+=1
+    if marked==n:
+        break #如果提早標記完就結束for迴圈
+print(total)
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
         </div>
 
@@ -221,31 +239,27 @@
     
 <nav class="article-nav">
   
-    <a href="/2022/03/31/hugo_problem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">prossimo</div>
-      <div class="article-nav-title">
-        
-          Hugo 疑難雜症
-        
-      </div>
-    </a>
   
+    <a href="/hugo_problem/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">前の記事</div>
+      <div class="article-nav-title">Hugo 疑難雜症</div>
+    </a>
   
 </nav>
 
 
     <section class="share">
-        <div class="share-title">share</div>
+        <div class="share-title">シェア</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=Hello World - Natalie Lin&url=http://nataliepjlin.github.io/2022/03/28/hello-world/">
+            href="https://twitter.com/share?text=APCS 考古題:小群體 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv08-1/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=Hello World - Natalie Lin&u=http://nataliepjlin.github.io/2022/03/28/hello-world/">
+            href="https://www.facebook.com/sharer.php?title=APCS 考古題:小群體 - Natalie Lin&u=http://nataliepjlin.github.io/apcs-adv08-1/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=Hello World - Natalie Lin&url=http://nataliepjlin.github.io/2022/03/28/hello-world/&pic=">
+            href="https://service.weibo.com/share/share.php?title=APCS 考古題:小群體 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv08-1/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
@@ -287,9 +301,23 @@
 
     
       
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/APCS/">APCS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hugo/">Hugo</a></li></ul>
+    </div>
+  </div>
+
 
     
       
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li></ul>
+    </div>
+  </div>
+
 
     
       
@@ -299,11 +327,15 @@
       <ul>
         
           <li>
-            <a href="/2022/03/31/hugo_problem/">Hugo 疑難雜症</a>
+            <a href="/apcs-adv08-1/">APCS 考古題:小群體</a>
           </li>
         
           <li>
-            <a href="/2022/03/28/hello-world/">Hello World</a>
+            <a href="/hugo_problem/">Hugo 疑難雜症</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
           </li>
         
       </ul>
