@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>APCS 考古題:小群體 | Natalie Lin</title>
+    <title>APCS 考古題:數字龍捲風 | Natalie Lin</title>
 
     <meta name="description" content="Natalie Lin">
     <meta name="keywords" content="">
@@ -15,21 +15,21 @@
 
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "APCS 考古題:小群體 | Natalie Lin"  />
+    <meta property="og:title" content= "APCS 考古題:數字龍捲風 | Natalie Lin"  />
     <meta property="og:description" content= "Natalie Lin" />
-    <meta property="og:url" content="http://nataliepjlin.github.io/apcs-adv08-1/index.html" />
+    <meta property="og:url" content="http://nataliepjlin.github.io/apcs-adv07-1/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Natalie Lin" />
     <meta property="article:publisher" content="" />
     <meta property="og:description" content="Natalie Lin" />
-    <meta name="twitter:title" content="APCS 考古題:小群體 | Natalie Lin"/>
+    <meta name="twitter:title" content="APCS 考古題:數字龍捲風 | Natalie Lin"/>
     <meta name="twitter:description" content="Natalie Lin"/>
     <script type="application/ld+json">
         {
             "description": "Natalie Lin",
             "author": { "@type": "Person", "name": "Natalie Lin" },
             "@type": "BlogPosting",
-            "url": "http://nataliepjlin.github.io/apcs-adv08-1/index.html",
+            "url": "http://nataliepjlin.github.io/apcs-adv07-1/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -38,11 +38,11 @@
             },
             "name": "Natalie Lin"
             },
-            "headline": "APCS 考古題:小群體 | Natalie Lin",
-            "datePublished": "2022-04-11T14:46:03.000Z",
+            "headline": "APCS 考古題:數字龍捲風 | Natalie Lin",
+            "datePublished": "2022-04-12T11:48:12.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://nataliepjlin.github.io/apcs-adv08-1/index.html"
+                "@id": "http://nataliepjlin.github.io/apcs-adv07-1/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -152,7 +152,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl1utzbqt00003wtu1pgd2o7b" class="article article-type-post" itemscope
+    <article id="post-cl1w40w3j00030gtugkrv6k2a" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -168,7 +168,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      APCS 考古題:小群體
+      APCS 考古題:數字龍捲風
     </h1>
   
 
@@ -178,7 +178,7 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-04-11T14:46:03.000Z" itemprop="datePublished">2022-04-11</time>
+  <time datetime="2022-04-12T11:48:12.000Z" itemprop="datePublished">2022-04-12</time>
 </div>
 
             
@@ -189,7 +189,7 @@
 
             
             <div class="article-tag">
-                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li></ul>
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li></ul>
             </div>
             
 
@@ -198,36 +198,69 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p><a target="_blank" rel="noopener" href="https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf">https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf</a></p>
-<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>把data內的元素從某不為-1的data[idx]開始跑，跑到就把該元素改成-1，跑到有標-1(開始的那個)為止<br>回傳有幾個被marked</p>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="main-function"><a href="#main-function" class="headerlink" title="main function"></a>main function</h2><pre><code class="bash">def mark(data,idx):
-    count=0
-    while(data[idx]!=-1):
-        tmp=data[idx]
-        data[idx]=-1 #mark
-        idx=tmp #跑到好友編號，重複迴圈
-        count+=1 #計算有幾個被標記
-    return count
+            <h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="main-function-輸入邊長、開始方向，製造1dlist，記錄每步的方向"><a href="#main-function-輸入邊長、開始方向，製造1dlist，記錄每步的方向" class="headerlink" title="main function: 輸入邊長、開始方向，製造1dlist，記錄每步的方向"></a>main function: 輸入邊長、開始方向，製造1dlist，記錄每步的方向</h2><pre><code class="bash">#n=5
+#d=0#left
+#3 4 2 1 4
+#4 2 3 8 9
+#2 1 9 5 6
+#4 2 3 7 8
+#1 2 6 4 3
+###
+#3
+#1
+#4 1 2
+#3 0 5
+#6 7 8
+#012587634
+#order list,input:方向、邊長;output:1dlist_每步的方向[0,1,2,2,3,3,0,0,0,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0]
+def order(r,d):
+    odlist=[]
+    direction=(d+4-1)%4 #1.下面下面迴圈會換方向(+1)所以要先-1 2.像是4可以被歸0
+    count=1 #單方向走幾步。如果走n-1步已經是最多了，不用n*n和len(odlist)比 **這種方法會算不到追加
+    while(count&lt;=n-1):
+        for _ in range(2):#每個長度走2次
+            direction=(direction+4)%4
+            odlist.append(direction)
+    count+=1
+    #最後一個長度會走3次，要再追加
+    direction=(direction+4)%4
+    for _ in range(n-1):
+        odlist.append(direction)
+    return odlist
 </code></pre>
-<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def mark(data,idx):
-    count=0
-    while(data[idx]!=-1):
-        tmp=data[idx]
-        data[idx]=-1 #mark
-        idx=tmp #跑到好友編號，重複迴圈
-        count+=1 #計算有幾個被標記
-    return count
-n=int(input())
-data=list(map(int,input().split()))
-marked=0
-total=0 #群體總數
-for i in range(n):
-    if data[i]!=-1:
-        marked+=mark(data,i)
-        total+=1
-    if marked==n:
-        break #如果提早標記完就結束for迴圈
-print(total)
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def order(r,d):
+    odlist=[]
+    direction=(d+4-1)%4
+    count=1 
+    while(count&lt;=n-1):
+        for _ in range(2):
+            direction=(direction+4)%4
+            odlist.append(direction)
+        count+=1
+    direction=(direction+4)%4
+    for _ in range(n-1):
+        odlist.append(direction)
+return odlist
+
+r=int(input())
+d=int(input())
+datas=[]#2d
+x,y=r//2,r//2
+for i in range n:
+    data=list(map(int,input().split()))
+    datas.append(data)
+steps=order(r,d)
+print(datas[x][y])
+for step in steps:#注意x是直的，y是橫的!
+    if step==0:
+        y-=1 #不能只print(datas[x-1][y])，會記錄不到x,y變化
+    if step==1:
+        x-=1
+    if step==2:
+        y+=1
+    if step==3:
+        x+=1
+    print(data[x][y],end=&quot;&quot;)
 </code></pre>
 
         </div>
@@ -247,19 +280,10 @@ print(total)
     
 <nav class="article-nav">
   
-    <a href="/apcs-adv07-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">次の記事</div>
-      <div class="article-nav-title">
-        
-          APCS 考古題:數字龍捲風
-        
-      </div>
-    </a>
   
-  
-    <a href="/hugo_problem/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/apcs-adv08-1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">前の記事</div>
-      <div class="article-nav-title">Hugo 疑難雜症</div>
+      <div class="article-nav-title">APCS 考古題:小群體</div>
     </a>
   
 </nav>
@@ -268,15 +292,15 @@ print(total)
     <section class="share">
         <div class="share-title">シェア</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=APCS 考古題:小群體 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv08-1/">
+            href="https://twitter.com/share?text=APCS 考古題:數字龍捲風 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv07-1/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=APCS 考古題:小群體 - Natalie Lin&u=http://nataliepjlin.github.io/apcs-adv08-1/">
+            href="https://www.facebook.com/sharer.php?title=APCS 考古題:數字龍捲風 - Natalie Lin&u=http://nataliepjlin.github.io/apcs-adv07-1/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=APCS 考古題:小群體 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv08-1/&pic=">
+            href="https://service.weibo.com/share/share.php?title=APCS 考古題:數字龍捲風 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv07-1/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>

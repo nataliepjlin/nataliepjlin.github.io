@@ -141,6 +141,121 @@
   
     
       <article
+id="post-apcs-adv07-1"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-adv07-1/">APCS 考古題:數字龍捲風</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="main-function-輸入邊長、開始方向，製造1dlist，記錄每步的方向"><a href="#main-function-輸入邊長、開始方向，製造1dlist，記錄每步的方向" class="headerlink" title="main function: 輸入邊長、開始方向，製造1dlist，記錄每步的方向"></a>main function: 輸入邊長、開始方向，製造1dlist，記錄每步的方向</h2><pre><code class="bash">#n=5
+#d=0#left
+#3 4 2 1 4
+#4 2 3 8 9
+#2 1 9 5 6
+#4 2 3 7 8
+#1 2 6 4 3
+###
+#3
+#1
+#4 1 2
+#3 0 5
+#6 7 8
+#012587634
+#order list,input:方向、邊長;output:1dlist_每步的方向[0,1,2,2,3,3,0,0,0,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0]
+def order(r,d):
+    odlist=[]
+    direction=(d+4-1)%4 #1.下面下面迴圈會換方向(+1)所以要先-1 2.像是4可以被歸0
+    count=1 #單方向走幾步。如果走n-1步已經是最多了，不用n*n和len(odlist)比 **這種方法會算不到追加
+    while(count&lt;=n-1):
+        for _ in range(2):#每個長度走2次
+            direction=(direction+4)%4
+            odlist.append(direction)
+    count+=1
+    #最後一個長度會走3次，要再追加
+    direction=(direction+4)%4
+    for _ in range(n-1):
+        odlist.append(direction)
+    return odlist
+</code></pre>
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def order(r,d):
+    odlist=[]
+    direction=(d+4-1)%4
+    count=1 
+    while(count&lt;=n-1):
+        for _ in range(2):
+            direction=(direction+4)%4
+            odlist.append(direction)
+        count+=1
+    direction=(direction+4)%4
+    for _ in range(n-1):
+        odlist.append(direction)
+return odlist
+
+r=int(input())
+d=int(input())
+datas=[]#2d
+x,y=r//2,r//2
+for i in range n:
+    data=list(map(int,input().split()))
+    datas.append(data)
+steps=order(r,d)
+print(datas[x][y])
+for step in steps:#注意x是直的，y是橫的!
+    if step==0:
+        y-=1 #不能只print(datas[x-1][y])，會記錄不到x,y變化
+    if step==1:
+        x-=1
+    if step==2:
+        y+=1
+    if step==3:
+        x+=1
+    print(data[x][y],end=&quot;&quot;)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-12T11:48:12.000Z" itemprop="datePublished">2022-04-12</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-apcs-adv08-1"
 class="article article-type-post"
 >
@@ -365,7 +480,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li></ul>
     </div>
   </div>
 
@@ -376,6 +491,10 @@ class="article article-type-post"
     <div class="widget-title"><span>Recent Posts</span></div>
     <div class="widget-inner">
       <ul>
+        
+          <li>
+            <a href="/apcs-adv07-1/">APCS 考古題:數字龍捲風</a>
+          </li>
         
           <li>
             <a href="/apcs-adv08-1/">APCS 考古題:小群體</a>
