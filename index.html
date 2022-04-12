@@ -167,7 +167,15 @@ class="article article-type-post"
         count+=1 #計算有幾個被標記
     return count
 </code></pre>
-<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">n=int(input())
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def mark(data,idx):
+    count=0
+    while(data[idx]!=-1):
+        tmp=data[idx]
+        data[idx]=-1 #mark
+        idx=tmp #跑到好友編號，重複迴圈
+        count+=1 #計算有幾個被標記
+    return count
+n=int(input())
 data=list(map(int,input().split()))
 marked=0
 total=0 #群體總數

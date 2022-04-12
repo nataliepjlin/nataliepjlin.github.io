@@ -209,7 +209,15 @@
         count+=1 #計算有幾個被標記
     return count
 </code></pre>
-<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">n=int(input())
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def mark(data,idx):
+    count=0
+    while(data[idx]!=-1):
+        tmp=data[idx]
+        data[idx]=-1 #mark
+        idx=tmp #跑到好友編號，重複迴圈
+        count+=1 #計算有幾個被標記
+    return count
+n=int(input())
 data=list(map(int,input().split()))
 marked=0
 total=0 #群體總數
@@ -241,7 +249,7 @@ print(total)
   
   
     <a href="/hugo_problem/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-caption">前の記事</div>
+      <div class="article-nav-caption">上一篇</div>
       <div class="article-nav-title">Hugo 疑難雜症</div>
     </a>
   
@@ -249,7 +257,7 @@ print(total)
 
 
     <section class="share">
-        <div class="share-title">シェア</div>
+        <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
             href="https://twitter.com/share?text=APCS 考古題:小群體 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv08-1/">
             <box-icon type='logo' name='twitter'></box-icon>
