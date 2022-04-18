@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>Hugo 疑難雜症 | Natalie Lin</title>
+    <title>APCS 考古題:陣列反轉 | Natalie Lin</title>
 
     <meta name="description" content="Natalie Lin">
     <meta name="keywords" content="">
@@ -15,21 +15,21 @@
 
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "Hugo 疑難雜症 | Natalie Lin"  />
+    <meta property="og:title" content= "APCS 考古題:陣列反轉 | Natalie Lin"  />
     <meta property="og:description" content= "Natalie Lin" />
-    <meta property="og:url" content="http://nataliepjlin.github.io/hugo_problem/index.html" />
+    <meta property="og:url" content="http://nataliepjlin.github.io/apcs-adv09-1/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Natalie Lin" />
     <meta property="article:publisher" content="" />
     <meta property="og:description" content="Natalie Lin" />
-    <meta name="twitter:title" content="Hugo 疑難雜症 | Natalie Lin"/>
+    <meta name="twitter:title" content="APCS 考古題:陣列反轉 | Natalie Lin"/>
     <meta name="twitter:description" content="Natalie Lin"/>
     <script type="application/ld+json">
         {
             "description": "Natalie Lin",
             "author": { "@type": "Person", "name": "Natalie Lin" },
             "@type": "BlogPosting",
-            "url": "http://nataliepjlin.github.io/hugo_problem/index.html",
+            "url": "http://nataliepjlin.github.io/apcs-adv09-1/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -38,11 +38,11 @@
             },
             "name": "Natalie Lin"
             },
-            "headline": "Hugo 疑難雜症 | Natalie Lin",
-            "datePublished": "2022-03-31T14:55:00.547Z",
+            "headline": "APCS 考古題:陣列反轉 | Natalie Lin",
+            "datePublished": "2022-04-18T15:24:25.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "http://nataliepjlin.github.io/hugo_problem/index.html"
+                "@id": "http://nataliepjlin.github.io/apcs-adv09-1/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -152,7 +152,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl1w4shc000055wtuahgzg7k8" class="article article-type-post" itemscope
+    <article id="post-cl24vizgd0000jgtucvk56d88" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -168,7 +168,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      Hugo 疑難雜症
+      APCS 考古題:陣列反轉
     </h1>
   
 
@@ -178,15 +178,19 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-03-31T14:55:00.547Z" itemprop="datePublished">2022-03-31</time>
+  <time datetime="2022-04-18T15:24:25.000Z" itemprop="datePublished">2022-04-18</time>
 </div>
 
             
             <div class="article-category">
-                <a class="article-category-link" href="/categories/Hugo/">Hugo</a>
+                <a class="article-category-link" href="/categories/APCS/">APCS</a>
             </div>
             
 
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%99%A3%E5%88%97%E5%8F%8D%E8%BD%89/" rel="tag">陣列反轉</a></li></ul>
+            </div>
             
 
             
@@ -194,17 +198,65 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h2 id="POST-SCSS-failed"><a href="#POST-SCSS-failed" class="headerlink" title="POST SCSS failed:"></a>POST SCSS failed:</h2><ol>
-<li>到「沒空白」的資料夾下面(像 <code>Natalie Lin</code> 名字中間有空格就不行)</li>
-<li>安裝本土npm, 不能是global</li>
-<li>看README有沒有要求要複製 <code>package.json</code> 、 <code>npm postcss</code> 之類的或其他東西</li>
+            <h1 id="在寫的時候卡住的點"><a href="#在寫的時候卡住的點" class="headerlink" title="在寫的時候卡住的點:"></a>在寫的時候卡住的點:</h1><ol>
+<li>row是橫列數量，相當於直行的長度;col是直行數量，相當於橫列的長度</li>
+<li>題目要求為「恢復」，或是說「回推」。(是b-&gt;a而不是a-&gt;b)<br>所以衍生出第三點🔻</li>
+<li>給的指令要反著做</li>
 </ol>
-<h2 id="網址-x2F-404-not-found"><a href="#網址-x2F-404-not-found" class="headerlink" title="網址&#x2F;404 not found:"></a>網址&#x2F;404 not found:</h2><p>確定有沒有貼成repo的網址:(</p>
-<h2 id="有git-submodule"><a href="#有git-submodule" class="headerlink" title="有git submodule"></a>有git submodule</h2><p>怎麼看:<br>git clone 之後cd進去裡面會顯示(main)或(master)<br>解決方式:<br>直接Download Zip不要用clone</p>
-<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>可以解決的方式:<br>😀在全域<code>config.toml</code>加上<code>canonifyURLs = &quot;true&quot;</code><br>😐在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)<br>😥丟到主頁(username.github.io)下面</p>
-<h2 id="有功能不會動-這次是search-function"><a href="#有功能不會動-這次是search-function" class="headerlink" title="有功能不會動(這次是search function)"></a>有功能不會動(這次是search function)</h2><p>解方同上</p>
-<h2 id="“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”"><a href="#“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”" class="headerlink" title="“TOCSS … this feature is not available in your current Hugo version”"></a>“TOCSS … this feature is not available in your current Hugo version”</h2><p>解決方式:<br>On the release page, look for archives with extended in the name.<br>如何確認是否安裝:<br>run <code>hugo version</code> and look for the word <code>extended</code>.</p>
-<h2 id="加入categories-頁面失敗"><a href="#加入categories-頁面失敗" class="headerlink" title="加入categories 頁面失敗"></a>加入categories 頁面失敗</h2><p><a target="_blank" rel="noopener" href="https://discourse.gohugo.io/t/tags-and-categories-dont-link-to-the-posts-under-that-category-or-tag/38107">問題</a><br>解決方式:<br>第10行改成 <code>&#123;&#123;range .Data.Pages&#125;&#125;</code></p>
+<h1 id="覺得可以沿用的方法"><a href="#覺得可以沿用的方法" class="headerlink" title="覺得可以沿用的方法:"></a>覺得可以沿用的方法:</h1><ol>
+<li>很混亂的時候代測資數字</li>
+<li>拿紙筆寫下來!</li>
+</ol>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="Function可改善處"><a href="#Function可改善處" class="headerlink" title="Function可改善處"></a>Function可改善處</h2><ol>
+<li>flip其實可以用reverse就好<pre><code class="bash">def flip(data):
+ data.reverse()
+ return data
+</code></pre>
+或用<pre><code class="bash">output=[]
+for i in data[::-1]:
+ output.append(i)
+</code></pre>
+也可以</li>
+</ol>
+<h2 id="Complete-Code"><a href="#Complete-Code" class="headerlink" title="Complete Code"></a>Complete Code</h2><pre><code class="bash">#data=[[1, 1], [3,1],[1,2]]
+#ddata=[[1,2,3],[4,5,6]]
+#print(&quot;init=&quot;,data)
+def flip(data):
+    row=len(data)#有幾個橫列(直行長度),2
+    col=len(data[0])# 3
+    for i in range(col):
+        for j in range(row//2):
+            data[j][i],data[row-1-j][i]=data[row-1-j][i],data[j][i]
+    #print(&quot;data=&quot;,data)
+    return data
+def rotate(data):
+    row=len(data)#有幾個橫列(直行長度),2
+    col=len(data[0])# 3
+    data2=[[0]*row for _ in range(col)]
+    #print(data2)
+    for i in range(row):#2,用r命名會比較清楚
+        for j in range(col):#3,用c命名會比較清楚
+            data2[j][i]=data[i][col-1-j]
+            #print(&quot;data2=&quot;,data2)
+            #或用data2[col-j-1][i]=data[i][j]
+    return(data2)
+#ddata=rotate(ddata)
+#ddata=rotate(ddata)
+#ddata=flip(ddata)
+#print(ddata)
+r,c,m=map(int,input().split())
+data=[list(map(int,input().split())) for _ in range(r)]
+commands=list(map(int,input().split()))
+for i in range(len(commands)-1,-1,-1):
+    if commands[i]==0:
+        data=rotate(data)
+        #print(&quot;nc,nr&quot;,col,row)
+    if commands[i]==1:
+        data=flip(data)
+print(len(data),len(data[0]))
+for i in range(len(data)):
+    print(*data[i])
+</code></pre>
 
         </div>
 
@@ -223,19 +275,10 @@
     
 <nav class="article-nav">
   
-    <a href="/apcs-adv08-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
-      <div class="article-nav-title">
-        
-          APCS 考古題:小群體
-        
-      </div>
-    </a>
   
-  
-    <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/apcs-adv07-1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">APCS 考古題:數字龍捲風</div>
     </a>
   
 </nav>
@@ -244,15 +287,15 @@
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=Hugo 疑難雜症 - Natalie Lin&url=http://nataliepjlin.github.io/hugo_problem/">
+            href="https://twitter.com/share?text=APCS 考古題:陣列反轉 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv09-1/">
             <box-icon type='logo' name='twitter'></box-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=Hugo 疑難雜症 - Natalie Lin&u=http://nataliepjlin.github.io/hugo_problem/">
+            href="https://www.facebook.com/sharer.php?title=APCS 考古題:陣列反轉 - Natalie Lin&u=http://nataliepjlin.github.io/apcs-adv09-1/">
             <box-icon name='facebook-square' type='logo' ></box-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=Hugo 疑難雜症 - Natalie Lin&url=http://nataliepjlin.github.io/hugo_problem/&pic=">
+            href="https://service.weibo.com/share/share.php?title=APCS 考古題:陣列反轉 - Natalie Lin&url=http://nataliepjlin.github.io/apcs-adv09-1/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>

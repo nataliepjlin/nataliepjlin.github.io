@@ -141,6 +141,116 @@
   
     
       <article
+id="post-apcs-adv09-1"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-adv09-1/">APCS 考古題:陣列反轉</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="在寫的時候卡住的點"><a href="#在寫的時候卡住的點" class="headerlink" title="在寫的時候卡住的點:"></a>在寫的時候卡住的點:</h1><ol>
+<li>row是橫列數量，相當於直行的長度;col是直行數量，相當於橫列的長度</li>
+<li>題目要求為「恢復」，或是說「回推」。(是b-&gt;a而不是a-&gt;b)<br>所以衍生出第三點🔻</li>
+<li>給的指令要反著做</li>
+</ol>
+<h1 id="覺得可以沿用的方法"><a href="#覺得可以沿用的方法" class="headerlink" title="覺得可以沿用的方法:"></a>覺得可以沿用的方法:</h1><ol>
+<li>很混亂的時候代測資數字</li>
+<li>拿紙筆寫下來!</li>
+</ol>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="Function可改善處"><a href="#Function可改善處" class="headerlink" title="Function可改善處"></a>Function可改善處</h2><ol>
+<li>flip其實可以用reverse就好<pre><code class="bash">def flip(data):
+ data.reverse()
+ return data
+</code></pre>
+或用<pre><code class="bash">output=[]
+for i in data[::-1]:
+ output.append(i)
+</code></pre>
+也可以</li>
+</ol>
+<h2 id="Complete-Code"><a href="#Complete-Code" class="headerlink" title="Complete Code"></a>Complete Code</h2><pre><code class="bash">#data=[[1, 1], [3,1],[1,2]]
+#ddata=[[1,2,3],[4,5,6]]
+#print(&quot;init=&quot;,data)
+def flip(data):
+    row=len(data)#有幾個橫列(直行長度),2
+    col=len(data[0])# 3
+    for i in range(col):
+        for j in range(row//2):
+            data[j][i],data[row-1-j][i]=data[row-1-j][i],data[j][i]
+    #print(&quot;data=&quot;,data)
+    return data
+def rotate(data):
+    row=len(data)#有幾個橫列(直行長度),2
+    col=len(data[0])# 3
+    data2=[[0]*row for _ in range(col)]
+    #print(data2)
+    for i in range(row):#2,用r命名會比較清楚
+        for j in range(col):#3,用c命名會比較清楚
+            data2[j][i]=data[i][col-1-j]
+            #print(&quot;data2=&quot;,data2)
+            #或用data2[col-j-1][i]=data[i][j]
+    return(data2)
+#ddata=rotate(ddata)
+#ddata=rotate(ddata)
+#ddata=flip(ddata)
+#print(ddata)
+r,c,m=map(int,input().split())
+data=[list(map(int,input().split())) for _ in range(r)]
+commands=list(map(int,input().split()))
+for i in range(len(commands)-1,-1,-1):
+    if commands[i]==0:
+        data=rotate(data)
+        #print(&quot;nc,nr&quot;,col,row)
+    if commands[i]==1:
+        data=flip(data)
+print(len(data),len(data[0]))
+for i in range(len(data)):
+    print(*data[i])
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-18T15:24:25.000Z" itemprop="datePublished">2022-04-18</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%99%A3%E5%88%97%E5%8F%8D%E8%BD%89/" rel="tag">陣列反轉</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-apcs-adv07-1"
 class="article article-type-post"
 >
@@ -480,7 +590,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%99%A3%E5%88%97%E5%8F%8D%E8%BD%89/" rel="tag">陣列反轉</a></li></ul>
     </div>
   </div>
 
@@ -491,6 +601,10 @@ class="article article-type-post"
     <div class="widget-title"><span>Recent Posts</span></div>
     <div class="widget-inner">
       <ul>
+        
+          <li>
+            <a href="/apcs-adv09-1/">APCS 考古題:陣列反轉</a>
+          </li>
         
           <li>
             <a href="/apcs-adv07-1/">APCS 考古題:數字龍捲風</a>
