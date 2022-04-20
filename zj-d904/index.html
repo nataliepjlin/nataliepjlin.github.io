@@ -6,35 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>about | Natalie Lin</title>
+    <title>d904:換零錢 | Natalie Lin</title>
 
     <meta name="description" content="Natalie Lin">
     <meta name="keywords" content="">
 
     
 
-
-
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="about"/>
-    <meta property="og:description" content=""/>
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://nataliepjlin.github.io/about/index.html" />
-    <meta property="og:site_name" content="Natalie Lin" />
+    <meta property="og:title" content= "d904:換零錢 | Natalie Lin"  />
+    <meta property="og:description" content= "Natalie Lin" />
+    <meta property="og:url" content="http://nataliepjlin.github.io/zj-d904/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="Natalie Lin" />
     <meta property="article:publisher" content="" />
+    <meta property="og:description" content="Natalie Lin" />
+    <meta name="twitter:title" content="d904:換零錢 | Natalie Lin"/>
+    <meta name="twitter:description" content="Natalie Lin"/>
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "about",
-            "description": "",
+            "description": "Natalie Lin",
+            "author": { "@type": "Person", "name": "Natalie Lin" },
+            "@type": "BlogPosting",
+            "url": "http://nataliepjlin.github.io/zj-d904/index.html",
             "publisher": {
-                "@type": "Organization",
-                "name": "Natalie Lin"
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://nataliepjlin.github.io"
             },
+            "name": "Natalie Lin"
+            },
+            "headline": "d904:換零錢 | Natalie Lin",
+            "datePublished": "2022-04-20T02:32:39.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http://nataliepjlin.github.io/zj-d904/index.html"
+            },
+            "@context": "http://schema.org"
         }
     </script>
+
+
 
 
     
@@ -62,7 +76,7 @@
 
 
     <script>
-        window.isPost = false
+        window.isPost = true
         window.aomori = {
             
             
@@ -86,8 +100,6 @@
                     <a class="header-type-title" href="/">Natalie Lin</a>
                 
     
-                
-                    <span class="header-type-page-title">| about</span>
                 
             </div>
         </div>
@@ -139,30 +151,147 @@
         <div class="main">
             <section class="inner">
                 <section class="inner-main">
-                    
+                    <div class="post">
+    <article id="post-cl26yppqv0000gktucags44lh" class="article article-type-post" itemscope
+    itemprop="blogPost">
 
+    <div class="article-inner">
 
-<div class="page">
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
   
-<article
-id="page-cl1w4shbw00035wtugpbghjq1"
-class="article article-type-page"
->
-  <div class="article-inner">
-      <div class="article-entry post-inner-html">
-          <p>A high school girl who codes 😎</p>
-<p>Find me on <a target="_blank" rel="noopener" href="https://github.com/nataliepjlin">Github</a>😺</p>
-<p>My Other Sites:<br><a href="https://nataliepjlin.github.io/blog/">Blog</a><br><a href="https://nataliepjlin.github.io/up/">Unplastify Youth</a></p>
-
-      </div>
-  </div>
-</article>
-
+    <h1 class="article-title" itemprop="name">
+      d904:換零錢
+    </h1>
   
 
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-04-20T02:32:39.000Z" itemprop="datePublished">2022-04-20</time>
 </div>
 
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/ZeroJudge/">ZeroJudge</a>
+            </div>
+            
 
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/d904/" rel="tag">d904</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=d904">https://zerojudge.tw/ShowProblem?problemid=d904</a></p>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><ol>
+<li>dp</li>
+<li>把值一路跑過去<img src="/assets/d904pic.png"  width=70%>
+(image credit:碁峰資訊)</li>
+</ol>
+<h1 id="注意的地方"><a href="#注意的地方" class="headerlink" title="注意的地方"></a>注意的地方</h1><ol>
+<li>c,n分別代表的意義，不要寫反!</li>
+<li>w的陣列大小要1000*10(+1)–w[10001]</li>
+</ol>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()&#123;
+  
+  int c,n;//要給的錢總值、硬幣種類數
+  int a[11]=&#123;&#125;,w[10001]=&#123;&#125;;//幣值、錢的總值
+  while(cin&gt;&gt;c&gt;&gt;n)&#123;
+    for(int i=0;i&lt;n;i++)&#123;
+        cin&gt;&gt;a[i];
+    &#125;
+    memset(w,0x6f,sizeof(w));
+    w[0]=0;
+    for(int i=0;i&lt;n;i++)&#123;
+        for(int j=a[i];j&lt;=c;j++)&#123;
+            if(w[j-a[i]]+1&lt;w[j])&#123;
+                w[j]=w[j-a[i]]+1;
+            &#125;
+        &#125;
+    &#125;
+    cout&lt;&lt;w[c]&lt;&lt;endl;
+  &#125; 
+&#125;
+</code></pre>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+  
+    <a href="/apcs-adv09-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">precedente</div>
+      <div class="article-nav-title">APCS 10503第2題:矩陣轉換</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">share</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=d904:換零錢 - Natalie Lin&url=http://nataliepjlin.github.io/zj-d904/">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=d904:換零錢 - Natalie Lin&u=http://nataliepjlin.github.io/zj-d904/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=d904:換零錢 - Natalie Lin&url=http://nataliepjlin.github.io/zj-d904/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
                 </section>
             </section>
 
@@ -174,6 +303,12 @@ class="article article-type-page"
 <div class="widget" id="widget">
     
       
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
     
       
   <div class="widget-wrap widget-cate">
