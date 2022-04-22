@@ -141,6 +141,76 @@
   
     
       <article
+id="post-apcs-10503"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-10503/">APCS 10503 成績指標</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <pre><code>#10
+#0 11 22 33 55 66 77 99 88 44
+# output:最高不及格,沒有不及格:best case&lt;endl&gt;最低及格,沒有及格:worst case
+n=int(input())
+scores=list(map(int,input().split()))
+best=-1
+worst=101
+scores.sort()
+print(*scores)
+for score in scores:
+    if best&lt;score&lt;60:
+        best=score
+    elif 60&lt;=score&lt;worst:
+        worst=score
+if(best!=-1):
+    print(best)
+else:
+    print(&quot;best case&quot;)
+if(worst!=101):
+    print(worst)
+else:
+    print(&quot;worst case&quot;)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-22T01:56:33.000Z" itemprop="datePublished">2022-04-22</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-zj-d904"
 class="article article-type-post"
 >
@@ -687,6 +757,10 @@ class="article article-type-post"
       <ul>
         
           <li>
+            <a href="/apcs-10503/">APCS 10503 成績指標</a>
+          </li>
+        
+          <li>
             <a href="/zj-d904/">d904:換零錢</a>
           </li>
         
@@ -700,10 +774,6 @@ class="article article-type-post"
         
           <li>
             <a href="/apcs-adv08-1/">APCS 考古題:小群體</a>
-          </li>
-        
-          <li>
-            <a href="/hugo_problem/">Hugo 疑難雜症</a>
           </li>
         
       </ul>
