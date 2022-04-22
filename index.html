@@ -141,6 +141,136 @@
   
     
       <article
+id="post-zj-f832"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/zj-f832/">f832 隕石捕捉器</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <pre><code class="bash">#n,m=4,3#隕石、捕捉器
+#ws=[23,45,67,99]#隕石重量 
+#bags=[46,67,100]#每個背包最多裝到哪種重量的隕石
+n,m=map(int,input().split())
+ws=list(map(int,input().split()))
+bags=list(map(int,input().split()))
+ws.sort(reverse=True)
+bags.sort(reverse=True)
+wi=bi=total=0
+#print(ws,bags)
+while(wi!=n and bi!=m):
+    if(ws[wi]&lt;=bags[bi]):
+        total+=ws[wi]
+        wi+=1
+        bi+=1
+    else:#裝不進去
+        wi+=1
+print(total)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-22T08:29:03.000Z" itemprop="datePublished">2022-04-22</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/Zerojudge/">Zerojudge</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/f832/" rel="tag">f832</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
+id="post-apcs-10510"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-10510/">APCS 10503 三角形辨別</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <pre><code>sides=list(map(int,input().split()))
+sides.sort()
+print(*sides)
+a,b,c=sides[0],sides[1],sides[2]
+if((a+b)&lt;=c):
+  print(&quot;No&quot;)
+elif((a*a+b*b)&gt;c*c):
+  print(&quot;Acute&quot;)
+elif((a*a+b*b)==c*c):
+  print(&quot;Right&quot;)
+else:
+  print(&quot;Obtuse&quot;)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-22T03:00:33.000Z" itemprop="datePublished">2022-04-22</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-apcs-10503"
 class="article article-type-post"
 >
@@ -236,7 +366,7 @@ class="article article-type-post"
 <li>c,n分別代表的意義，不要寫反!</li>
 <li>w的陣列大小要1000*10(+1)–w[10001]</li>
 </ol>
-<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><pre><code>#include&lt;bits/stdc++.h&gt;
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><pre><code class="bash">#include&lt;bits/stdc++.h&gt;
 using namespace std;
 int main()&#123;
   
@@ -734,7 +864,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-cate">
     <div class="widget-title"><span>Categories</span></div>
     <div class="widget-inner">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/APCS/">APCS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hugo/">Hugo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ZeroJudge/">ZeroJudge</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/APCS/">APCS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hugo/">Hugo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ZeroJudge/">ZeroJudge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Zerojudge/">Zerojudge</a></li></ul>
     </div>
   </div>
 
@@ -744,7 +874,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f832/" rel="tag">f832</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
     </div>
   </div>
 
@@ -757,6 +887,14 @@ class="article article-type-post"
       <ul>
         
           <li>
+            <a href="/zj-f832/">f832 隕石捕捉器</a>
+          </li>
+        
+          <li>
+            <a href="/apcs-10510/">APCS 10503 三角形辨別</a>
+          </li>
+        
+          <li>
             <a href="/apcs-10503/">APCS 10503 成績指標</a>
           </li>
         
@@ -766,14 +904,6 @@ class="article article-type-post"
         
           <li>
             <a href="/apcs-adv09-1/">APCS 10503第2題:矩陣轉換</a>
-          </li>
-        
-          <li>
-            <a href="/apcs-adv07-1/">APCS 考古題:數字龍捲風</a>
-          </li>
-        
-          <li>
-            <a href="/apcs-adv08-1/">APCS 考古題:小群體</a>
           </li>
         
       </ul>
