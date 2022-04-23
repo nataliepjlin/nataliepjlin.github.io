@@ -6,12 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-    <title>Tag | C++ | Natalie Lin</title>
+    <title>f698:後序運算式 | Natalie Lin</title>
 
     <meta name="description" content="Natalie Lin">
     <meta name="keywords" content="">
 
     
+
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= "f698:後序運算式 | Natalie Lin"  />
+    <meta property="og:description" content= "Natalie Lin" />
+    <meta property="og:url" content="http://nataliepjlin.github.io/zj-f698/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="Natalie Lin" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="Natalie Lin" />
+    <meta name="twitter:title" content="f698:後序運算式 | Natalie Lin"/>
+    <meta name="twitter:description" content="Natalie Lin"/>
+    <script type="application/ld+json">
+        {
+            "description": "Natalie Lin",
+            "author": { "@type": "Person", "name": "Natalie Lin" },
+            "@type": "BlogPosting",
+            "url": "http://nataliepjlin.github.io/zj-f698/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http://nataliepjlin.github.io"
+            },
+            "name": "Natalie Lin"
+            },
+            "headline": "f698:後序運算式 | Natalie Lin",
+            "datePublished": "2022-04-23T07:52:33.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "http://nataliepjlin.github.io/zj-f698/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
 
 
 
@@ -41,7 +76,7 @@
 
 
     <script>
-        window.isPost = false
+        window.isPost = true
         window.aomori = {
             
             
@@ -116,34 +151,157 @@
         <div class="main">
             <section class="inner">
                 <section class="inner-main">
-                    
+                    <div class="post">
+    <article id="post-cl2bkonqg0000yotudyci4mud" class="article article-type-post" itemscope
+    itemprop="blogPost">
 
-    
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-year-wrap">
-        <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
+    <div class="article-inner">
+
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
   
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/zj-d904/">d904:換零錢</a>
+    <h1 class="article-title" itemprop="name">
+      f698:後序運算式
     </h1>
   
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-04-23T07:52:33.000Z" itemprop="datePublished">2022-04-23</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/ZeroJudge/">ZeroJudge</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/f698/" rel="tag">f698</a></li></ul>
+            </div>
+            
+
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="Correct-Code"><a href="#Correct-Code" class="headerlink" title="Correct Code"></a>Correct Code</h2><pre><code class="bash">#data=&quot;6 3 / 1 4 - * 3 + 8 -&quot;
+def postfix(instr):
+    list1=list(map(str,instr.split()))
+    stack=[]
+    #print(&quot;len=&quot;,len(list1))
+    for i in range(len(list1)):
+        if list1[i] not in &quot;+-*/&quot;:
+            stack.append(list1[i])
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            ope=b+list1[i]+a
+            #print(&quot;a=&quot;,a,&quot;b=&quot;,b)
+            #print(&quot;ope=&quot;,ope)
+            stack.append(str(int(eval(ope))))
+    #print(stack)
+    return stack[0]
+data=str(input())
+ans=postfix(data)
+print(ans)
+</code></pre>
+<h2 id="不能用string直接算"><a href="#不能用string直接算" class="headerlink" title="不能用string直接算"></a>不能用string直接算</h2><p>如果用string直接算的話，長度和元素會算入空白!所以必須轉換成list，切出可用元素。<br>例如下面的code，data長度是5，而a會是空白</p>
+<pre><code class="bash">data=&quot;2 1 -&quot;
+print(&quot;data=&quot;,data)
+#print(&quot;outer len&quot;,len(data))
+def postfix (instr):
+    stack=[]
+    print(&quot;len=&quot;,len(instr))
+    for i in range(len(instr)):
+        if instr[i] not in &quot;+-*/&quot;:
+            stack.append(instr[i])
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            ope=b+instr[i]+a
+            print(&quot;a=&quot;,a,&quot;b=&quot;,b)
+            print(&quot;ope=&quot;,ope)
+            stack.append(str(eval(ope)))
+    print(stack)
+    return stack[0]
+ans=postfix(data)
+print(ans)
+</code></pre>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+  
+    <a href="/zj-g310/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">g310:pD. 甜甜圈大對決(Donut)</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=f698:後序運算式 - Natalie Lin&url=http://nataliepjlin.github.io/zj-f698/">
+            <box-icon type='logo' name='twitter'></box-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=f698:後序運算式 - Natalie Lin&u=http://nataliepjlin.github.io/zj-f698/">
+            <box-icon name='facebook-square' type='logo' ></box-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=f698:後序運算式 - Natalie Lin&url=http://nataliepjlin.github.io/zj-f698/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
 
 </article>
 
 
-    </div></section>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+</div>
                 </section>
             </section>
 
@@ -155,6 +313,12 @@
 <div class="widget" id="widget">
     
       
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
     
       
   <div class="widget-wrap widget-cate">

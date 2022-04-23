@@ -141,6 +141,100 @@
   
     
       <article
+id="post-zj-f698"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/zj-f698/">f698:後序運算式</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="Correct-Code"><a href="#Correct-Code" class="headerlink" title="Correct Code"></a>Correct Code</h2><pre><code class="bash">#data=&quot;6 3 / 1 4 - * 3 + 8 -&quot;
+def postfix(instr):
+    list1=list(map(str,instr.split()))
+    stack=[]
+    #print(&quot;len=&quot;,len(list1))
+    for i in range(len(list1)):
+        if list1[i] not in &quot;+-*/&quot;:
+            stack.append(list1[i])
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            ope=b+list1[i]+a
+            #print(&quot;a=&quot;,a,&quot;b=&quot;,b)
+            #print(&quot;ope=&quot;,ope)
+            stack.append(str(int(eval(ope))))
+    #print(stack)
+    return stack[0]
+data=str(input())
+ans=postfix(data)
+print(ans)
+</code></pre>
+<h2 id="不能用string直接算"><a href="#不能用string直接算" class="headerlink" title="不能用string直接算"></a>不能用string直接算</h2><p>如果用string直接算的話，長度和元素會算入空白!所以必須轉換成list，切出可用元素。<br>例如下面的code，data長度是5，而a會是空白</p>
+<pre><code class="bash">data=&quot;2 1 -&quot;
+print(&quot;data=&quot;,data)
+#print(&quot;outer len&quot;,len(data))
+def postfix (instr):
+    stack=[]
+    print(&quot;len=&quot;,len(instr))
+    for i in range(len(instr)):
+        if instr[i] not in &quot;+-*/&quot;:
+            stack.append(instr[i])
+        else:
+            a=stack.pop()
+            b=stack.pop()
+            ope=b+instr[i]+a
+            print(&quot;a=&quot;,a,&quot;b=&quot;,b)
+            print(&quot;ope=&quot;,ope)
+            stack.append(str(eval(ope)))
+    print(stack)
+    return stack[0]
+ans=postfix(data)
+print(ans)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-23T07:52:33.000Z" itemprop="datePublished">2022-04-23</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/ZeroJudge/">ZeroJudge</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/f698/" rel="tag">f698</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-zj-g310"
 class="article article-type-post"
 >
@@ -242,7 +336,7 @@ class="article article-type-post"
 
     <div class="article-body">
     <header class="article-title">
-        <a href="/zj-f832/">f832 隕石捕捉器</a>
+        <a href="/zj-f832/">f832:隕石 (Meteorite)</a>
     </header>
     <div class="article-entry post-inner-html">
         
@@ -880,63 +974,11 @@ class="article article-type-post"
 
     
   
-    
-      <article
-id="post-hello-world"
-class="article article-type-post"
->
 
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/hello-world/">Hello World</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
-</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2022-03-28T14:59:50.648Z" itemprop="datePublished">2022-03-28</time>
-</div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
   
-
+    <nav class="pagination">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+    </nav>
   
 </div>
 
@@ -966,7 +1008,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f832/" rel="tag">f832</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g310/" rel="tag">g310</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f698/" rel="tag">f698</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f832/" rel="tag">f832</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g310/" rel="tag">g310</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
     </div>
   </div>
 
@@ -979,11 +1021,15 @@ class="article article-type-post"
       <ul>
         
           <li>
+            <a href="/zj-f698/">f698:後序運算式</a>
+          </li>
+        
+          <li>
             <a href="/zj-g310/">g310:pD. 甜甜圈大對決(Donut)</a>
           </li>
         
           <li>
-            <a href="/zj-f832/">f832 隕石捕捉器</a>
+            <a href="/zj-f832/">f832:隕石 (Meteorite)</a>
           </li>
         
           <li>
@@ -992,10 +1038,6 @@ class="article article-type-post"
         
           <li>
             <a href="/apcs-10503/">APCS 10503 成績指標</a>
-          </li>
-        
-          <li>
-            <a href="/zj-d904/">d904:換零錢</a>
           </li>
         
       </ul>
