@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nataliepjlin.github.io/apcs-2016-1029-3/</loc>
+    
+    <lastmod>2022-04-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://nataliepjlin.github.io/zj-f832/</loc>
     
     <lastmod>2022-04-23</lastmod>
@@ -201,6 +210,13 @@
   
   <url>
     <loc>http://nataliepjlin.github.io/tags/f698/</loc>
+    <lastmod>2022-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://nataliepjlin.github.io/tags/c296/</loc>
     <lastmod>2022-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

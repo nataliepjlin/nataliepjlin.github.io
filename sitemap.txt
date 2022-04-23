@@ -1,3 +1,4 @@
+http://nataliepjlin.github.io/apcs-2016-1029-3/
 http://nataliepjlin.github.io/zj-f832/
 http://nataliepjlin.github.io/zj-f698/
 http://nataliepjlin.github.io/google10d8458c92b6c2b5.html
@@ -23,6 +24,7 @@ http://nataliepjlin.github.io/tags/f832/
 http://nataliepjlin.github.io/tags/Python/
 http://nataliepjlin.github.io/tags/g310/
 http://nataliepjlin.github.io/tags/f698/
+http://nataliepjlin.github.io/tags/c296/
 http://nataliepjlin.github.io/categories/APCS/
 http://nataliepjlin.github.io/categories/Hugo/
 http://nataliepjlin.github.io/categories/ZeroJudge/

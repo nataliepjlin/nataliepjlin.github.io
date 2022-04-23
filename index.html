@@ -141,6 +141,71 @@
   
     
       <article
+id="post-apcs-2016-1029-3"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-2016-1029-3/">c296:APCS-2016-1029-3定時K彈</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="小測資"><a href="#小測資" class="headerlink" title="小測資"></a>小測資</h2><pre><code class="bash">n,m,k=5,2,4#共n人，炸掉開始後的第m人，爆k次
+#輸入list1,移除炸掉的
+list1=list(range(1,n+1))
+#print(list1)
+def kkbomb(list1,m,k):
+    for i in range(k):
+        for j in range(m-1):
+            list1.append(list1.pop(0)) #把炸掉的元素「前面的」元素推回list1。pop(0)才會移除最前面的，pop()是移除頂層元素
+        list1.pop(0)
+        #print(&quot;now=&quot;,list1)
+    return list1
+list1=kkbomb(list1,m,k)
+print(list1[0])
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-23T08:48:56.000Z" itemprop="datePublished">2022-04-23</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c296/" rel="tag">c296</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
+  
+    
+      <article
 id="post-zj-f698"
 class="article article-type-post"
 >
@@ -916,64 +981,6 @@ print(total)
 
     
   
-    
-      <article
-id="post-hugo_problem"
-class="article article-type-post"
->
-
-
-
-<div class="article-inner">
-    
-
-    <div class="article-body">
-    <header class="article-title">
-        <a href="/hugo_problem/">Hugo 疑難雜症</a>
-    </header>
-    <div class="article-entry post-inner-html">
-        
-        <h2 id="POST-SCSS-failed"><a href="#POST-SCSS-failed" class="headerlink" title="POST SCSS failed:"></a>POST SCSS failed:</h2><ol>
-<li>到「沒空白」的資料夾下面(像 <code>Natalie Lin</code> 名字中間有空格就不行)</li>
-<li>安裝本土npm, 不能是global</li>
-<li>看README有沒有要求要複製 <code>package.json</code> 、 <code>npm postcss</code> 之類的或其他東西</li>
-</ol>
-<h2 id="網址-x2F-404-not-found"><a href="#網址-x2F-404-not-found" class="headerlink" title="網址&#x2F;404 not found:"></a>網址&#x2F;404 not found:</h2><p>確定有沒有貼成repo的網址:(</p>
-<h2 id="有git-submodule"><a href="#有git-submodule" class="headerlink" title="有git submodule"></a>有git submodule</h2><p>怎麼看:<br>git clone 之後cd進去裡面會顯示(main)或(master)<br>解決方式:<br>直接Download Zip不要用clone</p>
-<h2 id="連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt"><a href="#連結到-lt-username-github-io-x2F-img-gt-而不是-lt-username-github-io-x2F-repo-x2F-img-gt" class="headerlink" title="連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;"></a>連結到&lt;username.github.io&#x2F;img&gt;而不是&lt;username.github.io&#x2F;repo&#x2F;img&gt;</h2><p>怎麼看:<br>Go to files 之後檢查 public裡面的網址<br>可以解決的方式:<br>😀在全域<code>config.toml</code>加上<code>canonifyURLs = &quot;true&quot;</code><br>😐在path url前加 <code>/repo </code> (<code>repo</code>要換成專案名稱)<br>😥丟到主頁(username.github.io)下面</p>
-<h2 id="有功能不會動-這次是search-function"><a href="#有功能不會動-這次是search-function" class="headerlink" title="有功能不會動(這次是search function)"></a>有功能不會動(這次是search function)</h2><p>解方同上</p>
-<h2 id="“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”"><a href="#“TOCSS-…-this-feature-is-not-available-in-your-current-Hugo-version”" class="headerlink" title="“TOCSS … this feature is not available in your current Hugo version”"></a>“TOCSS … this feature is not available in your current Hugo version”</h2><p>解決方式:<br>On the release page, look for archives with extended in the name.<br>如何確認是否安裝:<br>run <code>hugo version</code> and look for the word <code>extended</code>.</p>
-<h2 id="加入categories-頁面失敗"><a href="#加入categories-頁面失敗" class="headerlink" title="加入categories 頁面失敗"></a>加入categories 頁面失敗</h2><p><a target="_blank" rel="noopener" href="https://discourse.gohugo.io/t/tags-and-categories-dont-link-to-the-posts-under-that-category-or-tag/38107">問題</a><br>解決方式:<br>第10行改成 <code>&#123;&#123;range .Data.Pages&#125;&#125;</code></p>
-
-        
-    </div>
-    </div>
-
-    <div class="article-badge">
-        
-        
-    </div>
-
-</div>
-
-<footer class="article-footer">
-    <div class="article-more-info">
-    <div class="article-date">
-  <time datetime="2022-03-31T14:55:00.547Z" itemprop="datePublished">2022-03-31</time>
-</div>
-    
-        <div class="article-category">
-        <a class="article-category-link" href="/categories/Hugo/">Hugo</a>
-        </div>
-    
-    
-    </div>
-</footer>
-
-</article>
-
-    
-  
 
   
     <nav class="pagination">
@@ -1008,7 +1015,7 @@ class="article article-type-post"
   <div class="widget-wrap widget-tags">
     <div class="widget-title"><span>Tags</span></div>
     <div class="widget-inner">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f698/" rel="tag">f698</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f832/" rel="tag">f832</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g310/" rel="tag">g310</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/b965/" rel="tag">b965</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c296/" rel="tag">c296</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/d904/" rel="tag">d904</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f698/" rel="tag">f698</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/f832/" rel="tag">f832</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g310/" rel="tag">g310</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B8%E5%AD%97%E9%BE%8D%E6%8D%B2%E9%A2%A8/" rel="tag">數字龍捲風</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A9%E9%99%A3%E8%BD%89%E6%8F%9B/" rel="tag">矩陣轉換</a></li></ul>
     </div>
   </div>
 
@@ -1019,6 +1026,10 @@ class="article article-type-post"
     <div class="widget-title"><span>Recent Posts</span></div>
     <div class="widget-inner">
       <ul>
+        
+          <li>
+            <a href="/apcs-2016-1029-3/">c296:APCS-2016-1029-3定時K彈</a>
+          </li>
         
           <li>
             <a href="/zj-f698/">f698:後序運算式</a>
@@ -1034,10 +1045,6 @@ class="article article-type-post"
         
           <li>
             <a href="/apcs-10510/">APCS 10503 三角形辨別</a>
-          </li>
-        
-          <li>
-            <a href="/apcs-10503/">APCS 10503 成績指標</a>
           </li>
         
       </ul>
