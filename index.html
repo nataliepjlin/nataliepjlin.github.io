@@ -170,6 +170,22 @@ def kkbomb(list1,m,k):
 list1=kkbomb(list1,m,k)
 print(list1[0])
 </code></pre>
+<h2 id="大測資"><a href="#大測資" class="headerlink" title="大測資"></a>大測資</h2><pre><code class="bash">#n,m,k=8,3,6#共n人，炸掉開始後的第m人，爆k次
+def findlucky(luckyidx,list1,m):
+    print(&quot;before=&quot;,list1)
+    popidx=(luckyidx+m-1)%len(list1)
+    list1.pop(popidx)
+    luckyidx=(popidx+len(list1))%len(list1)
+    print(&quot;nowlist1=&quot;,list1)
+    return luckyidx
+n,m,k=map(int,input().split())
+list1=list(range(1,n+1))
+luckyidx=0
+for _ in range(k):
+    luckyidx=findlucky(luckyidx,list1,m)
+    print(&quot;luckyidx=&quot;,luckyidx,&quot;luckyitem=&quot;,list1[luckyidx])
+print(list1[luckyidx])#不能print(list1)，不一定有炸到剩一個
+</code></pre>
 
         
     </div>
