@@ -1,0 +1,12 @@
+version: 1646451311888
+language: cn
+aomori_logo: /images/avatar.jpg
+aomori_menu:
+  Home: /
+  Archives: /archives
+aomori_widgets:
+  - toc
+  - category
+  - tag
+  - recent_posts
+  - archive
