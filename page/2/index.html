@@ -48,7 +48,7 @@
     
 
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦕</text></svg>">
     
 
     
@@ -140,6 +140,88 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="index">
+  
+    
+      <article
+id="post-apcs-adv08-1"
+class="article article-type-post"
+>
+
+
+
+<div class="article-inner">
+    
+
+    <div class="article-body">
+    <header class="article-title">
+        <a href="/apcs-adv08-1/">APCS 考古題:小群體</a>
+    </header>
+    <div class="article-entry post-inner-html">
+        
+        <h1 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h1><p><a target="_blank" rel="noopener" href="https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf">https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2018/12/1060304APCSImplementation.pdf</a></p>
+<h1 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h1><p>把data內的元素從某不為-1的data[idx]開始跑，跑到就把該元素改成-1，跑到有標-1(開始的那個)為止<br>回傳有幾個被marked</p>
+<h1 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h1><h2 id="main-function"><a href="#main-function" class="headerlink" title="main function"></a>main function</h2><pre><code class="bash">def mark(data,idx):
+    count=0
+    while(data[idx]!=-1):
+        tmp=data[idx]
+        data[idx]=-1 #mark
+        idx=tmp #跑到好友編號，重複迴圈
+        count+=1 #計算有幾個被標記
+    return count
+</code></pre>
+<h2 id="complete-code"><a href="#complete-code" class="headerlink" title="complete code"></a>complete code</h2><pre><code class="bash">def mark(data,idx):
+    count=0
+    while(data[idx]!=-1):
+        tmp=data[idx]
+        data[idx]=-1 #mark
+        idx=tmp #跑到好友編號，重複迴圈
+        count+=1 #計算有幾個被標記
+    return count
+n=int(input())
+data=list(map(int,input().split()))
+marked=0
+total=0 #群體總數
+for i in range(n):
+    if data[i]!=-1:
+        marked+=mark(data,i)
+        total+=1
+    if marked==n:
+        break #如果提早標記完就結束for迴圈
+print(total)
+</code></pre>
+
+        
+    </div>
+    </div>
+
+    <div class="article-badge">
+        
+        
+    </div>
+
+</div>
+
+<footer class="article-footer">
+    <div class="article-more-info">
+    <div class="article-date">
+  <time datetime="2022-04-11T14:46:03.000Z" itemprop="datePublished">2022-04-11</time>
+</div>
+    
+        <div class="article-category">
+        <a class="article-category-link" href="/categories/APCS/">APCS</a>
+        </div>
+    
+    
+        <div class="article-tag">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E7%BE%A4%E9%AB%94/" rel="tag">小群體</a></li></ul>
+        </div>
+    
+    </div>
+</footer>
+
+</article>
+
+    
   
     
       <article
@@ -302,7 +384,11 @@ class="article article-type-post"
       <ul>
         
           <li>
-            <a href="/apcs-2016-1029-3/">c296:APCS-2016-1029-3定時K彈</a>
+            <a href="/post/">post</a>
+          </li>
+        
+          <li>
+            <a href="/apcs-2016-1029-3/">c296: APCS-2016-1029-3定時K彈</a>
           </li>
         
           <li>
@@ -315,10 +401,6 @@ class="article article-type-post"
         
           <li>
             <a href="/zj-f832/">f832:隕石 (Meteorite)</a>
-          </li>
-        
-          <li>
-            <a href="/apcs-10510/">APCS 10503 三角形辨別</a>
           </li>
         
       </ul>
@@ -375,12 +457,12 @@ class="article article-type-post"
 
 
 <!-- Google Analytics-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5W0NNDDZQ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-222555603-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-C5W0NNDDZQ');
+    gtag('config', 'UA-222555603-2');
 </script>
 
 
